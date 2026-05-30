@@ -1,0 +1,324 @@
+/* 🎰 GLOBAL MONEY TREE CRASH VIP SLOTS MASTER RESPONSIVE CSS */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    user-select: none; 
+    -webkit-user-select: none; 
+}
+
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background: #060913; 
+    color: white; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100vh; 
+    height: 100dvh; 
+    overflow: hidden; 
+    padding-bottom: env(safe-area-inset-bottom); 
+}
+
+/* ক্যাসিনো হেডার প্যানেল এরিয়া */
+.header { 
+    width: 100%; 
+    padding: 6px 16px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background: #0e1322; 
+    border-bottom: 2px solid #f1c40f; 
+    box-sizing: border-box; 
+    z-index: 100; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
+    flex-shrink: 0; 
+}
+
+.brand .name { 
+    color: #f1c40f; 
+    font-weight: 900; 
+    font-size: 17px; 
+    letter-spacing: 1px; 
+}
+
+.brand .game { 
+    color: #00ffcc; 
+    font-weight: bold; 
+    font-size: 10px; 
+}
+
+.header-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+/* 🔈 সাউন্ড বোতাম স্টাইল ভাই ভাই */
+.sound-btn { 
+    background: #1a2238; 
+    border: 1px solid #1a233d; 
+    color: #fff; 
+    font-size: 14px; 
+    width: 32px; 
+    height: 34px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: 0.2s; 
+}
+
+.sound-btn.muted-active { 
+    background: #7f1d1d; 
+    border-color: #ea2027; 
+}
+
+.balance-box { 
+    background: linear-gradient(145deg, #10ac84, #1dd1a1); 
+    padding: 4px 12px; 
+    border-radius: 30px; 
+    font-weight: bold; 
+    font-size: 14px; 
+    border: 1px solid #ffffff33; 
+}
+
+/* 🎰 ওরিজিনাল নিওন টাকার গাছ এবং ওডস মাল্টিপ্লায়ার ক্যানভাস এরিয়া ভাই ভাই */
+.tree-crash-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    max-width: 390px;
+    height: 48%; 
+    margin: auto 0;
+    flex-shrink: 1;
+}
+
+.tree-window-frame {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #0f1c18 0%, #030a08 100%); /* প্রিমিয়াম ডার্ক ফরেস্ট গ্রিন ক্যাশ ম্যাট থিম লুক */
+    border-radius: 16px;
+    border: 3px solid #f1c40f; /* লাক্সারি গোল্ডেন নিওন ক্যাসিনো বর্ডার লক ভাই ভাই */
+    box-shadow: 0 0 22px rgba(241, 196, 15, 0.35), inset 0 0 25px #000;
+    position: relative;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+/* 🚀 লাইভ এক্সপোনেনশিয়াল মাল্টিপ্লায়ার ওডস টেক্সট স্টাইল ভাই ভাই */
+.live-multiplier-counter {
+    font-size: 44px;
+    font-weight: 900;
+    color: #00e6ff;
+    text-shadow: 0 0 15px rgba(0, 230, 255, 0.6), 0 2px 4px #000;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+    z-index: 20;
+}
+
+/* 🌳 টাকার গাছ কন্টেইনার স্টাইল নোড ভাই ভাই */
+.money-tree-avatar {
+    font-size: 88px; /* ক্যানভাসের ভেতরে গাছটি সুন্দর বড় ও গর্জিয়াস দেখানোর ক্লিয়ার ফ্রেম */
+    filter: drop-shadow(0 0 15px rgba(241, 196, 15, 0.6));
+    z-index: 10;
+    transition: all 0.1s ease;
+}
+
+/* 🔄 গেম রানিং অবস্থায় গাছ অন ফায়ার কাঁপানোর ওরিজিনাল ভাইব্রেশন এনিমেশন */
+.tree-neon-vibrate-active {
+    animation: moneyTreeVibrateLoop 0.12s infinite alternate ease-in-out;
+}
+
+/* 💥 ক্র্যাশ হয়ে যাওয়ার খতরনাক ব্লাস্ট ঝাঁকুনি এনিমেশন ভাই ভাই */
+.tree-crash-blast-shake {
+    animation: moneyTreeBlastShake 0.4s 1 cubic-bezier(.36,.07,.19,.97) both;
+    transform: scale(0.85);
+    filter: brightness(0.4) grayscale(1) drop-shadow(0 0 0 transparent);
+}
+
+@keyframes moneyTreeVibrateLoop {
+    0% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 12px #f1c40f) brightness(1); }
+    100% { transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 22px #1dd1a1) brightness(1.2); }
+}
+
+@keyframes moneyTreeBlastShake {
+    10%, 90% { transform: translate3d(-2px, 0, 0) scale(0.9); }
+    20%, 80% { transform: translate3d(4px, 0, 0) scale(0.9); }
+    30%, 50%, 70% { transform: translate3d(-6px, 0, 0) scale(0.85); }
+    40%, 60% { transform: translate3d(6px, 0, 0) scale(0.85); }
+}
+
+/* 🪙 গোল্ডেন ফলিং কয়েন পার্টিকেল বাফার লেয়ার */
+.falling-coins-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.falling-coin-dot {
+    position: absolute;
+    top: 30%;
+    width: 8px;
+    height: 8px;
+    background: #f1c40f;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #f1c40f, inset 0 0 2px #fff;
+    animation: coinFallDownDirect 0.8s 1 linear forwards;
+}
+
+@keyframes coinFallDownDirect {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(200px) scale(0.5); opacity: 0; }
+}
+
+/* 🏆 ইন-লাইন লাইভ স্কোরিং মেসেজ বার ভাই ভাই */
+.win-status-container { 
+    width: 92%; 
+    max-width: 360px; 
+    background: #0e1322; 
+    border: 1px solid #1a233d; 
+    padding: 8px; 
+    border-radius: 12px; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 12px; 
+    color: #00e6ff; 
+    flex-shrink: 0; 
+    margin-bottom: 4px; 
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
+}
+
+.win-glow-bar { 
+    background: #10ac84 !important; 
+    color: #fff !important; 
+    box-shadow: 0 0 15px #10ac84 !important; 
+    border-color: #fff; 
+}
+
+.lose-glow-bar { 
+    background: #962d2d !important; 
+    color: #fff !important; 
+    box-shadow: 0 0 15px #962d2d !important; 
+    border-color: #fff; 
+}
+
+/* 🎛️ কন্ট্রোল প্যানেল এরিয়া ভাই ভাই */
+.footer-controls { 
+    position: relative; 
+    bottom: 0; 
+    margin-bottom: 45px; 
+    width: 94%; 
+    max-width: 360px; 
+    background: #0e1322; 
+    padding: 8px 10px; 
+    border-radius: 25px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 6px; 
+    border: 1px solid #1a233d; 
+    box-shadow: 0 -5px 25px rgba(0,0,0,0.7); 
+    pointer-events: auto; 
+    flex-shrink: 0; 
+}
+
+.play-section { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    width: 100%; 
+    justify-content: space-between; 
+    padding: 0 4px; 
+    box-sizing: border-box; 
+}
+
+.bet-selector { 
+    display: flex; 
+    align-items: center; 
+    background: #060913; 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    border: 2px solid #1a233d; 
+    flex: 1; 
+    justify-content: space-between; 
+    transition: opacity 0.2s ease;
+}
+
+.bet-btn-nav { 
+    color: #f1c40f; 
+    border: none; 
+    background: none; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    width: 25px; 
+    height: 25px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* ওরিজিনাল প্রিমিয়াম ডাইনামিক ACTION বোতাম (BET / CASH OUT) */
+.play-btn { 
+    background: linear-gradient(180deg, #f1c40f, #f39c12); 
+    color: #000; 
+    padding: 8px 22px; 
+    border-radius: 20px; 
+    font-weight: 900; 
+    font-size: 14px; 
+    cursor: pointer; 
+    border: none; 
+    box-shadow: 0 3px 10px rgba(241,196,15,0.3); 
+    transition: background 0.15s ease, transform 0.1s; 
+    letter-spacing: 1px; 
+}
+
+.play-btn:active { 
+    transform: translateY(2px); 
+    box-shadow: none; 
+}
+
+.play-btn:disabled { 
+    background: #555 !important; 
+    color: #aaa !important; 
+    box-shadow: none !important; 
+    cursor: not-allowed; 
+}
+
+.icon-group { 
+    display: flex; 
+    gap: 8px; 
+}
+
+.icon-btn { 
+    background: #1a2238; 
+    border: none; 
+    color: #fff; 
+    width: 34px; 
+    height: 34px; 
+    border-radius: 50%; 
+    font-size: 13px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+}
+
+.icon-btn.active { 
+    background: #7f1d1d; 
+    color: #f1c40f; 
+    box-shadow: 0 0 8px #f1c40f; 
+}
